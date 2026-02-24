@@ -1,0 +1,59 @@
+<!-- 
+{% if site.friends %}
+<hr>
+<h5>FRIENDS</h5>
+<ul class="list-inline">
+  {% for friend in site.friends %}
+  <li><a href="{{friend.href}}">{{friend.title}}</a></li>
+  {% endfor %}
+</ul>
+{% endif %}
+-->
+
+{% if site.friends %}
+<hr>
+<h5>FRIENDS</h5>
+<style>
+  /* 友情链接容器样式 */
+  .friends-list {
+    padding-left: 0;
+    display: flex;
+    flex-wrap: wrap; /* 自动换行 */
+    gap: 8px;       /* 方块之间的间距 */
+  }
+
+  .friends-list li {
+    list-style: none;
+    margin: 0 !important; /* 清除默认间距 */
+  }
+
+  .friends-list li a {
+    display: inline-block;
+    padding: 4px 12px;
+    background-color: rgba(0, 133, 161, 0.1); /* 轻微的主题青色背景 */
+    color: #0085a1 !important;               /* 文字颜色 */
+    border: 1px solid rgba(0, 133, 161, 0.2);
+    border-radius: 6px;                      /* 圆角方框 */
+    font-size: 13px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+
+  /* 悬停效果 */
+  .friends-list li a:hover {
+    background-color: #0085a1;               /* 变成实色 */
+    color: #ffffff !important;               /* 文字变白 */
+    transform: translateY(-2px);             /* 向上轻微浮动 */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);    /* 添加阴影 */
+    text-decoration: none;
+  }
+</style>
+
+<ul class="friends-list">
+  {% for friend in site.friends %}
+    <li>
+      <a href="{{friend.href}}" target="_blank">{{friend.title}}</a>
+    </li>
+  {% endfor %}
+</ul>
+{% endif %}

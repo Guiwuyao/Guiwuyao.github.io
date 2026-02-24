@@ -1,0 +1,83 @@
+<!--
+{% comment %}
+    @param {boolean} bottom - bottom will render <hr> 
+{% endcomment %}
+
+{% if site.featured-tags %}
+<section>
+    {% if include.bottom %}
+        <hr class="hidden-sm hidden-xs">
+    {% endif %}
+    <h5><a href="{{'/archive/' | prepend: site.baseurl }}">FEATURED TAGS</a></h5>
+    <div class="tags">
+        {% capture tags %}
+        {% comment %}
+            there must be no space between for and if otherwise this tricky sort won't work.
+            url_encode/decode is for escaping otherwise extra <a> will get generated 
+            but it will break sort...
+        {% endcomment %}
+        {% for tag in site.tags %}{% if tag[1].size > site.featured-condition-size %}
+                <a data-sort="{{ site.posts.size | minus: tag[1].size | prepend: '0000' | slice: -4, 4 }}" 
+                    href="{{ site.baseurl }}/archive/?tag={{ tag[0] | url_encode }}"
+                    title="{{ tag[0] }}"
+                    rel="{{ tag[1].size }}">{{ tag[0] }}</a>__SEPARATOR__
+        {% endif %}{% endfor %}
+        {% endcapture %}
+        {{ tags | split:'__SEPARATOR__' | sort }}
+    </div>
+</section>
+{% endif %}
+-->
+
+{% if site.featured-tags %}
+<section>
+    {% if include.bottom %}
+        <hr class="hidden-sm hidden-xs">
+    {% endif %}
+    <h5><a href="{{'/archive/' | prepend: site.baseurl }}">FEATURED TAGS</a></h5>
+    
+    <style>
+        /* 标签容器美化 */
+        .tags-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px; /* 标签之间的间距 */
+            margin-bottom: 15px;
+        }
+
+        .tags-container a {
+            display: inline-block;
+            padding: 2px 10px;
+            background-color: rgba(0, 0, 0, 0.05); /* 默认淡灰色背景 */
+            color: #666 !important;               /* 默认文字颜色 */
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            border-radius: 4px;                   /* 轻微圆角 */
+            font-size: 12px;
+            text-decoration: none !important;
+            transition: all 0.2s ease-in-out;
+            line-height: 1.6;
+        }
+
+        /* 标签悬停效果 */
+        .tags-container a:hover {
+            background-color: #0085a1;            /* 悬停变为主题青色 */
+            color: #ffffff !important;            /* 文字变白 */
+            border-color: #0085a1;
+            transform: scale(1.05);               /* 轻微放大 */
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+    </style>
+
+    <div class="tags tags-container">
+        {% capture tags %}
+        {% for tag in site.tags %}{% if tag[1].size > site.featured-condition-size %}
+                <a data-sort="{{ site.posts.size | minus: tag[1].size | prepend: '0000' | slice: -4, 4 }}" 
+                    href="{{ site.baseurl }}/archive/?tag={{ tag[0] | url_encode }}"
+                    title="{{ tag[0] }}"
+                    rel="{{ tag[1].size }}">{{ tag[0] }}</a>__SEPARATOR__
+        {% endif %}{% endfor %}
+        {% endcapture %}
+        {{ tags | split:'__SEPARATOR__' | sort | join: '' }}
+    </div>
+</section>
+{% endif %}
