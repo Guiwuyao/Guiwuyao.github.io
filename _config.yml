@@ -1,8 +1,8 @@
 # Site settings
 title: 景诚
-SEOTitle: 景诚的博客 | LJ Blog
+SEOTitle: 景诚的博客 | LJC Blog
 header-img: img/home.jpg
-email: yongzhi_li@outlook.com
+email: lijingcheng.lj@gmail.com
 description: "这里是 @景诚 的个人博客，与你一起发现更大的世界 "
 keyword: "景诚 , 电气 , 杂文 "
 url: "" # your host, for absolute URL
@@ -15,8 +15,8 @@ future: true
 RSS: false
 #weibo_username: huxpro
 #zhihu_username: huxpro
-github_username: Yongzhi-Lee
-yuque_username: lj.yq
+github_username: Guiwuyao
+yuque_username: ljc
 #facebook_username:  huxpro
 #linkedin_username:  firstname-lastname-idxxxx
 
