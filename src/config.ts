@@ -44,6 +44,7 @@ export const navBarConfig: NavBarConfig = {
 		LinkPreset.Home,
 		LinkPreset.Archive,
 		LinkPreset.About,
+		LinkPreset.Friends,
 		{
 			name: "旧版",
 			url: "https://yongzhi-lee.github.io/", // Internal links should not include the base path, as it is automatically added
@@ -76,6 +77,16 @@ export const profileConfig: ProfileConfig = {
 		},
 	],
 };
+
+export const friends = [
+  {
+    name: "Smaritron",
+    url: "https://www.smaritron.top",
+    avatar:
+      "https://www.smaritron.top/images/avatar.webp",
+    description: "找你找了一个世界",
+  },
+];
 
 export const licenseConfig: LicenseConfig = {
 	enable: false,
