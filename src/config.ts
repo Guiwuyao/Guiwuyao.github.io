@@ -62,7 +62,7 @@ export const profileConfig: ProfileConfig = {
 			icon: "fa6-brands:user-group", // Visit https://icones.js.org/ for icon codes
 			// You will need to install the corresponding icon set if it's not already included
 			// `pnpm add @iconify-json/<icon-set-name>`
-			url: "/friends/",
+			url: "/friends",
 		},
 		{
 			name: "微信公众号",
