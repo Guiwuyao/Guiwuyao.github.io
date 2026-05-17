@@ -67,7 +67,7 @@ export const profileConfig: ProfileConfig = {
 		{
 			name: "微信公众号",
 			icon: "fa6-brands:weixin",
-			url: "/wechat-qrcode",
+			url: "https://guiwuyao.github.io/wechat-qrcode",
 		},
 		{
 			name: "GitHub",
