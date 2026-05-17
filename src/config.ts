@@ -44,7 +44,6 @@ export const navBarConfig: NavBarConfig = {
 		LinkPreset.Home,
 		LinkPreset.Archive,
 		LinkPreset.About,
-		LinkPreset.Friends,
 		{
 			name: "旧版",
 			url: "https://yongzhi-lee.github.io/", // Internal links should not include the base path, as it is automatically added
@@ -59,11 +58,11 @@ export const profileConfig: ProfileConfig = {
 	bio: "对未来最大的慷慨是把一切献给现在",
 	links: [
 		{
-			name: "Twitter",
-			icon: "fa6-brands:twitter", // Visit https://icones.js.org/ for icon codes
+			name: "友链",
+			icon: "fa6-brands:user-group", // Visit https://icones.js.org/ for icon codes
 			// You will need to install the corresponding icon set if it's not already included
 			// `pnpm add @iconify-json/<icon-set-name>`
-			url: "https://twitter.com",
+			url: "/friends/",
 		},
 		{
 			name: "微信公众号",
