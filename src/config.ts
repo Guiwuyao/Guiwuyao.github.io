@@ -62,7 +62,7 @@ export const profileConfig: ProfileConfig = {
 			icon: "fa6-solid:user-group", // Visit https://icones.js.org/ for icon codes
 			// You will need to install the corresponding icon set if it's not already included
 			// `pnpm add @iconify-json/<icon-set-name>`
-			url: "/friends",
+			url: "/friends/",
 		},
 		{
 			name: "微信公众号",
@@ -79,11 +79,11 @@ export const profileConfig: ProfileConfig = {
 
 export const friends = [
   {
-    name: "Smaritron",
-    url: "https://www.smaritron.top",
+    name: "Wely",
+    url: "https://blog.wely.fun/",
     avatar:
-      "https://www.smaritron.top/images/avatar.webp",
-    description: "找你找了一个世界",
+      "https://blog.wely.fun/_astro/favicon.DNVwIxQK_Z1OtV1e.webp",
+    description: "这里是Wely的博客。在这里，畅所欲言。",
   },
 ];
 
