@@ -65,9 +65,9 @@ export const profileConfig: ProfileConfig = {
 			url: "https://twitter.com",
 		},
 		{
-			name: "Steam",
-			icon: "fa6-brands:steam",
-			url: "https://store.steampowered.com",
+			name: "微信公众号",
+			icon: "fa6-brands:weixin",
+			url: "https://guiwuyao.github.io/wechat-qrcode",
 		},
 		{
 			name: "GitHub",

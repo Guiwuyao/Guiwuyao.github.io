@@ -1,0 +1,20 @@
+---
+import MainGridLayout from '../layouts/MainGridLayout.astro'
+---
+
+<MainGridLayout title="微信公众号">
+    <div class="card-base p-8 flex flex-col items-center justify-center min-h-[50vh]">
+        <h2 class="text-2xl font-bold mb-6">欢迎关注我的微信公众号</h2>
+        
+        <img 
+            src="assets/images/wechat-qrcode.jpg" 
+            alt="微信公众号二维码" 
+            class="w-64 h-64 rounded-lg shadow-md" 
+        />
+        
+        <p class="mt-6 text-50 text-center">
+            请使用微信扫描上方二维码<br/>
+            或者在微信搜索：<strong>李景诚</strong>
+        </p>
+    </div>
+</MainGridLayout>
