@@ -3,7 +3,10 @@ dist/
 
 # generated types
 .astro/
-.backup
+
+# backup
+.backup/
+
 # dependencies
 node_modules/
 
@@ -29,3 +32,7 @@ yarn.lock
 # ide
 .idea
 *.iml
+
+# Obsidian
+src/content/posts/.obsidian/
+src/content/posts/template/
