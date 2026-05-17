@@ -79,10 +79,10 @@ export const profileConfig: ProfileConfig = {
 
 export const friends = [
   {
-    name: "Wely",
+    name: "wely",
     url: "https://blog.wely.fun/",
     avatar:
-      "https://blog.wely.fun/_astro/favicon.DNVwIxQK_Z1OtV1e.webp",
+      "/wely.webp",
     description: "这里是Wely的博客。在这里，畅所欲言。",
   },
 ];
