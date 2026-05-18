@@ -2,7 +2,8 @@
 title: hello world
 published: 2026-05-16
 description: 第一篇博客
-tags: []
+tags:
+  - 总结
 category: 随笔
 draft: false
 ---
